@@ -113,4 +113,7 @@ app.post('/split-payments/compute', (req, res) => {
 
 })
 
-app.listen(5000, () => console.log('Server started!'))
+app.get('/', (req, res) => res.status(200).send('Welcome to Lannister Pay TPSS endpoint!'))
+
+const PORT = process.env.PORT || 8080;
+app.listen(PORT, () => console.log('Server started!'))
